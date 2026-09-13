@@ -1,52 +1,46 @@
-import { ArrowDown, ArrowRight } from 'lucide-react'
+import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { WHATSAPP_URL } from '../content'
 
-const MotionDiv = motion.div
-
-export function SectionEyebrow({ children, index }) {
+export function Eyebrow({ children, index }) {
   return (
-    <div className="section-eyebrow">
+    <p className="eyebrow">
       {index && <span>{index}</span>}
-      <span>{children}</span>
-    </div>
+      {children}
+    </p>
   )
 }
 
 export function Reveal({ children, delay = 0, className = '' }) {
   const reduceMotion = useReducedMotion()
+
   return (
-    <MotionDiv
+    <motion.div
       className={className}
-      initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+      initial={reduceMotion ? false : { opacity: 0, y: 28 }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.18 }}
+      viewport={{ once: true, amount: 0.16 }}
       transition={{ duration: 0.72, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
-    </MotionDiv>
+    </motion.div>
   )
 }
 
-export function PrimaryCTA({ children = 'Aplicar para mentoria', className = '' }) {
+export function PrimaryCTA({ children = 'Conversar com o Saulo', className = '' }) {
   return (
-    <a
-      href={WHATSAPP_URL}
-      target="_blank"
-      rel="noreferrer"
-      className={`button button-primary ${className}`}
-    >
+    <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className={`button button-primary ${className}`}>
       <span>{children}</span>
-      <ArrowRight size={17} strokeWidth={1.8} />
+      <ArrowUpRight size={17} aria-hidden="true" />
     </a>
   )
 }
 
-export function SecondaryCTA({ href = '#metodo', children = 'Conhecer o método' }) {
+export function SecondaryCTA({ href = '#abordagem', children = 'Conhecer a abordagem' }) {
   return (
     <a href={href} className="button button-secondary">
       <span>{children}</span>
-      <ArrowDown size={16} strokeWidth={1.8} />
+      <ArrowDown size={16} aria-hidden="true" />
     </a>
   )
 }

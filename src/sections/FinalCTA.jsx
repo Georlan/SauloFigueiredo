@@ -1,18 +1,18 @@
 import Logo from '../components/Logo'
-import { PrimaryCTA, Reveal, SectionEyebrow } from '../components/UI'
+import { PrimaryCTA, Reveal } from '../components/UI'
 
 export default function FinalCTA() {
   return (
-    <section className="final-cta-section">
-      <div className="container">
-        <Reveal>
-          <div className="final-cta-card">
-            <div className="final-cta-mark"><Logo /></div>
-            <SectionEyebrow>Próximo passo</SectionEyebrow>
-            <h2>Sua comunicação já está dizendo alguma coisa. <span className="text-muted">Escolha o quê.</span></h2>
-            <p>Converse com o Saulo, explique seu momento e entenda se a mentoria individual é a melhor próxima etapa para o seu posicionamento.</p>
-            <div className="final-actions"><PrimaryCTA>Quero aplicar para a mentoria</PrimaryCTA><span>Atendimento direto via WhatsApp</span></div>
-          </div>
+    <section className="section final-cta-section" aria-labelledby="final-title">
+      <div className="container final-cta-grid">
+        <Reveal className="final-cta-mark">
+          <Logo />
+        </Reveal>
+        <Reveal delay={0.08} className="final-cta-copy">
+          <p className="eyebrow">Próximo passo</p>
+          <h2 id="final-title">Sua comunicação já está dizendo alguma coisa. Escolha o quê.</h2>
+          <p>Explique seu momento e entenda se a mentoria individual faz sentido para o seu próximo passo.</p>
+          <PrimaryCTA>Conversar no WhatsApp</PrimaryCTA>
         </Reveal>
       </div>
     </section>
