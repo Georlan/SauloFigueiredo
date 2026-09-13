@@ -2,6 +2,8 @@ import { ArrowDown, ArrowRight } from 'lucide-react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { WHATSAPP_URL } from '../content'
 
+const MotionDiv = motion.div
+
 export function SectionEyebrow({ children, index }) {
   return (
     <div className="section-eyebrow">
@@ -14,7 +16,7 @@ export function SectionEyebrow({ children, index }) {
 export function Reveal({ children, delay = 0, className = '' }) {
   const reduceMotion = useReducedMotion()
   return (
-    <motion.div
+    <MotionDiv
       className={className}
       initial={reduceMotion ? false : { opacity: 0, y: 24 }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
@@ -22,7 +24,7 @@ export function Reveal({ children, delay = 0, className = '' }) {
       transition={{ duration: 0.72, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
-    </motion.div>
+    </MotionDiv>
   )
 }
 
