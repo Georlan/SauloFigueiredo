@@ -5,13 +5,10 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-main">
-        <div className="footer-brand">
+        <a href="#top" className="footer-brand" aria-label="Saulo Figueiredo — voltar ao início">
           <Logo />
-          <div>
-            <strong>Saulo Figueiredo</strong>
-            <span>Audiovisual & percepção de valor</span>
-          </div>
-        </div>
+          <span>Saulo Figueiredo</span>
+        </a>
         <div className="footer-links">
           <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">Instagram</a>
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">WhatsApp</a>
@@ -19,8 +16,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <span>© {new Date().getFullYear()} Saulo Figueiredo.</span>
-        <span>Design com intenção. Conteúdo com função.</span>
+        <span>© {new Date().getFullYear()} Saulo Figueiredo</span>
+        <span>Audiovisual · Direção · Narrativa</span>
       </div>
     </footer>
   )
