@@ -4,9 +4,9 @@ export const WHATSAPP_URL =
 export const INSTAGRAM_URL = 'https://www.instagram.com/osaulofigueiredo/'
 
 export const navItems = [
-  ['Abordagem', '#abordagem'],
-  ['Mentoria', '#mentoria'],
-  ['Sobre', '#sobre'],
+  ['Audiovisual', '#abordagem'],
+  ['Construção de Renda - Como sair da CLT', '#mentoria'],
+  ['Biografia', '#sobre'],
 ]
 
 export const approach = [
