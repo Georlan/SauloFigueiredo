@@ -169,3 +169,28 @@ h1, h2, h3, p { overflow-wrap: break-word; }
 .button-secondary:hover { border-color: #fff; background: rgba(5, 5, 5, 0.48); }
 .hero-foot { align-self: stretch; display: flex; align-items: center; justify-content: flex-end; gap: 14px; margin-top: 46px; padding-top: 0; color: rgba(255, 255, 255, 0.47); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; }
 .hero-foot i { width: 3px; height: 3px; border-radius: 50%; background: currentColor; }
+
+/* Keep the service CTA and signature on the same right-hand axis. */
+@media (min-width: 901px) {
+  .hero .hero-copy {
+    width: min(46%, 460px);
+    margin-left: auto;
+    text-align: center;
+  }
+  .hero .hero-actions {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero .hero-actions .button {
+    width: 100%;
+    min-width: 0;
+    font-weight: 400;
+  }
+  .hero .hero-foot {
+    align-self: flex-end;
+    width: min(46%, 460px);
+    justify-content: center;
+    margin-top: 24px;
+    padding-top: 0;
+  }
+}
