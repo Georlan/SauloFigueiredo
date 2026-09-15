@@ -15,9 +15,19 @@ export default function Mentor() {
   const portraitY = useTransform(scrollYProgress, [0, 1], ['-3%', '4%'])
   const headingY = useTransform(scrollYProgress, [0.18, 0.7], ['4%', '-2%'])
 
-  const reveal = (delay = 0, x = 0, y = 24) => ({
-    initial: reduceMotion ? false : { opacity: 0, x, y, filter: 'blur(5px)' },
-    whileInView: reduceMotion ? undefined : { opacity: 1, x: 0, y: 0, filter: 'blur(0px)' },
+  const reveal = (delay = 0, x = 0, y = 24, withBlur = true) => ({
+    initial: reduceMotion ? false : {
+      opacity: 0,
+      x,
+      y,
+      ...(withBlur ? { filter: 'blur(5px)' } : {}),
+    },
+    whileInView: reduceMotion ? undefined : {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      ...(withBlur ? { filter: 'blur(0px)' } : {}),
+    },
     viewport: { once: true, amount: 0.22 },
     transition: { duration: 0.82, delay, ease: [0.22, 1, 0.36, 1] },
   })
@@ -34,7 +44,7 @@ export default function Mentor() {
           height="1308"
           loading="lazy"
           style={reduceMotion ? { rotate: -19 } : { y: phoneY, rotate: -19 }}
-          {...reveal(0.05, -36, 20)}
+          {...reveal(0.05, -36, 20, false)}
         />
         <motion.img
           className="start-now-portrait"
@@ -44,7 +54,7 @@ export default function Mentor() {
           height="1448"
           loading="lazy"
           style={reduceMotion ? undefined : { y: portraitY }}
-          {...reveal(0.12, 38, 18)}
+          {...reveal(0.12, 38, 18, false)}
         />
 
         <motion.div
