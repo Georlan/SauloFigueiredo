@@ -4,6 +4,7 @@ import ScrollProgress from './components/ScrollProgress'
 import Hero from './sections/Hero'
 import Method from './sections/Method'
 import Mentor from './sections/Mentor'
+import Ebook from './sections/Ebook'
 import About from './sections/About'
 import FAQ from './sections/FAQ'
 import FinalCTA from './sections/FinalCTA'
@@ -17,6 +18,7 @@ export default function App() {
       <main id="conteudo">
         <Hero />
         <Mentor />
+        <Ebook />
         <Method />
         <About />
         <FAQ />
