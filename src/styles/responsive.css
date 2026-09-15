@@ -78,7 +78,7 @@
   .approach-intro h2, .mentoring-heading h2, .about-copy h2, .faq-heading h2, .final-cta-copy h2 { font-size: clamp(3rem, 13vw, 4.2rem); }
   .approach-copy p, .mentoring-lead, .about-copy > p:not(.eyebrow, .about-role), .final-cta-copy > p:not(.eyebrow) { font-size: 1rem; }
   .approach-list { margin-top: 56px; }
-  .approach-item { grid-template-columns: 44px 1fr; gap: 16px; align-items: baseline; min-height: 0; padding: 30px 0; }
+  .approach-item { grid-template-columns: 38px 1fr; gap: 14px; align-items: baseline; min-height: 0; padding: 28px 22px; border-radius: 20px; }
   .approach-item h3 { font-size: 2rem; }
   .approach-item p { grid-column: 2; font-size: 0.9rem; }
 
