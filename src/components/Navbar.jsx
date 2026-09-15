@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { ArrowUpRight, Menu, X } from 'lucide-react'
-import { navItems, WHATSAPP_URL } from '../content'
+import { Instagram, Menu, X, Youtube } from 'lucide-react'
+import { INSTAGRAM_URL, navItems } from '../content'
 import Logo from './Logo'
 
 export default function Navbar() {
@@ -14,18 +14,21 @@ export default function Navbar() {
   return (
     <header className={`nav-shell ${isOpen ? 'is-open' : ''}`}>
       <nav className="container nav" aria-label="Navegação principal">
-        <a href="#top" className="brand" aria-label="Saulo Figueiredo — início" onClick={() => setIsOpen(false)}>
-          <Logo className="brand-mark" />
-          <span>Saulo Figueiredo</span>
+        <a href="#top" className="brand brand-trio" aria-label="Saulo Figueiredo — início" onClick={() => setIsOpen(false)}>
+          <Logo className="brand-mark" /><Logo className="brand-mark" /><Logo className="brand-mark" />
         </a>
 
         <div className="nav-links" aria-label="Seções">
           {navItems.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
         </div>
 
-        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="nav-cta">
-          Conversar <ArrowUpRight size={15} aria-hidden="true" />
-        </a>
+        <div className="social-links" aria-label="Redes sociais">
+          <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube"><Youtube /></a>
+          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram /></a>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noreferrer" aria-label="TikTok" className="tiktok-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.2 3c.5 2.3 1.8 3.7 4.3 4v3.2c-1.7 0-3.2-.5-4.3-1.4v6.1a6 6 0 1 1-5.1-5.9v3.3a2.8 2.8 0 1 0 1.9 2.6V3h3.2Z" /></svg>
+          </a>
+        </div>
 
         <button
           className="menu-toggle"
@@ -46,8 +49,8 @@ export default function Navbar() {
               <span>0{index + 1}</span>{label}
             </a>
           ))}
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mobile-contact" onClick={() => setIsOpen(false)}>
-            Conversar no WhatsApp <ArrowUpRight aria-hidden="true" />
+          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="mobile-contact" onClick={() => setIsOpen(false)}>
+            @osaulofigueiredo <Instagram aria-hidden="true" />
           </a>
         </div>
       </div>
