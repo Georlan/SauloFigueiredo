@@ -9,7 +9,7 @@
 @media (max-width: 900px) {
   .container { width: min(calc(100% - 40px), var(--container)); }
   .nav { grid-template-columns: 1fr auto; min-height: 72px; }
-  .nav-links, .nav-cta { display: none; }
+  .nav-links, .nav-cta, .social-links { display: none; }
   .menu-toggle { display: grid; place-items: center; justify-self: end; }
   .nav-shell.is-open { background: #050505; }
   .mobile-menu {
@@ -38,9 +38,11 @@
       linear-gradient(0deg, rgba(3, 3, 3, 0.98) 0%, rgba(3, 3, 3, 0.84) 42%, rgba(3, 3, 3, 0.08) 76%),
       linear-gradient(180deg, rgba(3, 3, 3, 0.62) 0%, transparent 28%);
   }
-  .hero-content { min-height: max(760px, 100svh); align-items: stretch; justify-content: flex-end; padding-top: 130px; padding-bottom: 44px; }
+  .hero-content { min-height: max(760px, 100svh); align-items: stretch; justify-content: flex-end; padding-top: 130px; padding-bottom: 74px; }
   .hero-copy { width: 100%; margin: 0; }
   .hero h1 { max-width: 720px; font-size: clamp(3.7rem, 11.2vw, 6.2rem); }
+  .hero-service { font-size: clamp(1.15rem, 4vw, 1.55rem); }
+  .hero-actions .button { min-width: 0; min-height: 64px; font-size: clamp(1.5rem, 6vw, 2rem); }
   .hero-lead { max-width: 580px; }
   .hero-foot { display: none; }
 
