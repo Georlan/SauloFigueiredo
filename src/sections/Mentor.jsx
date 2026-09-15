@@ -33,7 +33,7 @@ export default function Mentor() {
           width="736"
           height="1308"
           loading="lazy"
-          style={reduceMotion ? undefined : { y: phoneY }}
+          style={reduceMotion ? { rotate: -19 } : { y: phoneY, rotate: -19 }}
           {...reveal(0.05, -36, 20)}
         />
         <motion.img
