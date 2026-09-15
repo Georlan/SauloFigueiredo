@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { PrimaryCTA, SecondaryCTA } from '../components/UI'
+import { PrimaryCTA } from '../components/UI'
 
 export default function Hero() {
   const reduceMotion = useReducedMotion()
@@ -26,18 +26,11 @@ export default function Hero() {
 
       <div className="container hero-content">
         <div className="hero-copy">
-          <motion.p className="hero-kicker" {...entrance(0.08)}>
-            Saulo Figueiredo <span /> Direção audiovisual
+          <motion.p id="hero-title" className="hero-service" {...entrance(0.15)}>
+            Serviços - Filmmaker | CE
           </motion.p>
-          <motion.h1 id="hero-title" {...entrance(0.15)}>
-            Sua imagem define a primeira leitura do seu <em>valor.</em>
-          </motion.h1>
-          <motion.p className="hero-lead" {...entrance(0.24)}>
-            Direção visual, narrativa e audiovisual para construir uma presença com intenção — da ideia à execução.
-          </motion.p>
-          <motion.div className="hero-actions" {...entrance(0.33)}>
-            <PrimaryCTA />
-            <SecondaryCTA />
+          <motion.div className="hero-actions" {...entrance(0.28)}>
+            <PrimaryCTA>Pedir Orçamento</PrimaryCTA>
           </motion.div>
         </div>
 
