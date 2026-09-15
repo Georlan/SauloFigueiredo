@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import ScrollProgress from './components/ScrollProgress'
 import Hero from './sections/Hero'
 import Method from './sections/Method'
 import Mentor from './sections/Mentor'
@@ -11,6 +12,7 @@ export default function App() {
   return (
     <div className="site-shell">
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
+      <ScrollProgress />
       <Navbar />
       <main id="conteudo">
         <Hero />
