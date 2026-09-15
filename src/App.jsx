@@ -14,8 +14,8 @@ export default function App() {
       <Navbar />
       <main id="conteudo">
         <Hero />
-        <Method />
         <Mentor />
+        <Method />
         <About />
         <FAQ />
         <FinalCTA />
