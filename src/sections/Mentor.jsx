@@ -9,13 +9,13 @@ export default function Mentor() {
         <img className="start-now-portrait" src="/brand/saulo-mentoria.webp" alt="Saulo Figueiredo" width="1086" height="1448" loading="lazy" />
         <div className="start-now-heading">
           <h2 id="start-now-title"><span>Start</span><span>Now</span></h2>
-          <span className="start-now-label">Mentoria</span>
+          <span className="start-now-label">Mentoring</span>
           <div className="start-now-marks" aria-hidden="true">
             {[0, 1, 2].map(i => <img key={i} src="/brand/sf-mark.png" alt="" width="28" height="28" />)}
           </div>
         </div>
         <a className="start-now-callout" href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-          Conheça o caminho que me levou a sair da CLT aos 19 anos e trabalhar com serviços digitais
+          Conheça o caminho que me levou a sair da CLT aos 18 anos e trabalhar com serviços digitais
         </a>
       </div>
     </section>
