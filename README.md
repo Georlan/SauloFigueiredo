@@ -1,37 +1,13 @@
-# Saulo Figueiredo — Landing Page
+# Saulo Figueiredo — portfólio e contato
 
-Landing page responsiva para a mentoria de Saulo Figueiredo, com direção editorial baseada nos assets reais da marca e foco em audiovisual, narrativa e posicionamento.
+Landing estática com React + Vite. Instalação: npm ci; desenvolvimento: npm run dev; checagens: npm run lint e npm run build.
 
-## Stack
+Cloudflare Pages oferece fallback SPA por padrão quando não há 404.html; por isso /portfolio e /mentoria funcionam em acesso direto sem regra curinga de _redirects.
 
-- React 19 + Vite
-- Tailwind CSS
-- Framer Motion
-- Lucide React
+## Conteúdo real e URLs
 
-## Rodar localmente
+Edite src/siteData.js para configurar o perfil oficial do TikTok, canal e vídeo do YouTube, e cadastrar projetos reais e autorizados em portfolioProjects. WhatsApp e Instagram foram preservados do site anterior.
 
-```bash
-npm install
-npm run dev
-```
+O portfólio inicia vazio deliberadamente: não exibir trabalhos, clientes, métricas ou vídeos fictícios. Sem link verificado, YouTube informa pendência e TikTok aparece sem ação.
 
-Para validar produção:
-
-```bash
-npm run lint
-npm run build
-npm run preview
-```
-
-## Estrutura
-
-- `src/App.jsx`: composição principal
-- `src/sections/`: hero, abordagem, mentoria, sobre, FAQ e CTA final
-- `src/components/`: navegação responsiva, marca real, CTAs e rodapé
-- `public/brand/`: fotografia otimizada e símbolo oficial fornecidos pelo cliente
-- `src/styles/`: sistema visual, seções e responsividade
-
-## CTA
-
-O CTA principal abre o WhatsApp do Saulo com mensagem pré-preenchida, conforme o briefing do projeto.
+O formulário não guarda dados: prepara uma mensagem wa.me e o visitante confirma o envio no WhatsApp. Não há backend ou CRM.

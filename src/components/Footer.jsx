@@ -1,24 +1,18 @@
-import { INSTAGRAM_URL, WHATSAPP_URL } from '../content'
-import Logo from './Logo'
 
+import Logo from './Logo'
+import { INSTAGRAM_URL, whatsAppUrl, YOUTUBE_CHANNEL_URL, TIKTOK_URL } from '../siteData'
 export default function Footer() {
-  return (
-    <footer className="footer">
-      <div className="container footer-main">
-        <a href="#top" className="footer-brand" aria-label="Saulo Figueiredo — voltar ao início">
-          <Logo />
-          <span>Saulo Figueiredo</span>
-        </a>
-        <div className="footer-links">
-          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">Instagram</a>
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">WhatsApp</a>
-          <a href="#top">Voltar ao topo ↑</a>
-        </div>
-      </div>
-      <div className="container footer-bottom">
-        <span>© {new Date().getFullYear()} Saulo Figueiredo</span>
-        <span>Audiovisual · Direção · Narrativa</span>
-      </div>
-    </footer>
-  )
+  return <footer className="site-footer"><div className="container">
+    <div className="site-footer-main">
+      <a href="/" className="site-footer-logo"><Logo /><span>Saulo Figueiredo</span></a>
+      <nav aria-label="Navegação do rodapé">
+        <a href="/portfolio">Portfólio</a><a href="/#servicos">Serviços</a><a href="/mentoria">Mentoria e e-book</a>
+        <a href={whatsAppUrl()} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">Instagram</a>
+        {YOUTUBE_CHANNEL_URL && <a href={YOUTUBE_CHANNEL_URL} target="_blank" rel="noopener noreferrer">YouTube</a>}
+        {TIKTOK_URL && <a href={TIKTOK_URL} target="_blank" rel="noopener noreferrer">TikTok</a>}
+      </nav>
+    </div>
+    <div className="site-footer-bottom"><span>© {new Date().getFullYear()} Saulo Figueiredo</span><span>Direção audiovisual · Ceará</span></div>
+  </div></footer>
 }
