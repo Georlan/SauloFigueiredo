@@ -20,7 +20,7 @@ export default function ContactForm() {
       details.trim() ? 'Sobre o projeto: ' + details.trim() : '',
       'Podemos conversar?',
     ].filter(Boolean).join('\n')
-    window.open(whatsAppUrl(message), '_blank', 'noopener,noreferrer')
+    window.location.assign(whatsAppUrl(message))
   }
   return <section className="contact-section" id="contato" aria-labelledby="contact-title">
     <div className="container contact-layout">

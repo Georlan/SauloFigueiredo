@@ -2,7 +2,7 @@
 
 Landing estática com React + Vite. Instalação: npm ci; desenvolvimento: npm run dev; checagens: npm run lint e npm run build.
 
-O arquivo public/_redirects preserva rotas diretas /portfolio e /mentoria no Cloudflare Pages.
+Cloudflare Pages oferece fallback SPA por padrão quando não há 404.html; por isso /portfolio e /mentoria funcionam em acesso direto sem regra curinga de _redirects.
 
 ## Conteúdo real e URLs
 
